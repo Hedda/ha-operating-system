@@ -1,4 +1,4 @@
-From 712cc5889c828ae617b23bc9ea497dc018eb4dee Mon Sep 17 00:00:00 2001
+From 9a56c84a95523bc6b8dbe8795873eef8250d5845 Mon Sep 17 00:00:00 2001
 From: Tim Lunn <tim@feathertop.org>
 Date: Tue, 31 Oct 2023 14:38:24 +1100
 Subject: [PATCH] ARM: dts: Add Sonoff iHost Smart Home Hub
@@ -25,14 +25,14 @@ rv1126-evb-v13.
 
 Signed-off-by: Tim Lunn <tim@feathertop.org>
 ---
- arch/arm/boot/dts/Makefile                    |   2 +
- .../boot/dts/rockchip/rv1109-sonoff-ihost.dts |  13 +
- arch/arm/boot/dts/rockchip/rv1109.dtsi        |  23 +
- arch/arm/boot/dts/rv1126-sonoff-ihost.dts     |  13 +
- arch/arm/boot/dts/rv1126-sonoff-ihost.dtsi    | 409 ++++++++++++++++++
+ arch/arm/boot/dts/Makefile                 |   2 +
+ arch/arm/boot/dts/rv1109-sonoff-ihost.dts  |  13 +
+ arch/arm/boot/dts/rv1109.dtsi              |  23 ++
+ arch/arm/boot/dts/rv1126-sonoff-ihost.dts  |  13 +
+ arch/arm/boot/dts/rv1126-sonoff-ihost.dtsi | 409 +++++++++++++++++++++
  5 files changed, 460 insertions(+)
- create mode 100644 arch/arm/boot/dts/rockchip/rv1109-sonoff-ihost.dts
- create mode 100644 arch/arm/boot/dts/rockchip/rv1109.dtsi
+ create mode 100644 arch/arm/boot/dts/rv1109-sonoff-ihost.dts
+ create mode 100644 arch/arm/boot/dts/rv1109.dtsi
  create mode 100644 arch/arm/boot/dts/rv1126-sonoff-ihost.dts
  create mode 100644 arch/arm/boot/dts/rv1126-sonoff-ihost.dtsi
 
@@ -50,11 +50,11 @@ index c78b44386..fb11278f2 100644
  	rk3036-evb.dtb \
  	rk3036-kylin.dtb \
  	rk3066a-bqcurie2.dtb \
-diff --git a/arch/arm/boot/dts/rockchip/rv1109-sonoff-ihost.dts b/arch/arm/boot/dts/rockchip/rv1109-sonoff-ihost.dts
+diff --git a/arch/arm/boot/dts/rv1109-sonoff-ihost.dts b/arch/arm/boot/dts/rv1109-sonoff-ihost.dts
 new file mode 100644
 index 000000000..5bae0ea1f
 --- /dev/null
-+++ b/arch/arm/boot/dts/rockchip/rv1109-sonoff-ihost.dts
++++ b/arch/arm/boot/dts/rv1109-sonoff-ihost.dts
 @@ -0,0 +1,13 @@
 +// SPDX-License-Identifier: (GPL-2.0+ OR MIT)
 +/*
@@ -70,11 +70,11 @@ index 000000000..5bae0ea1f
 +	compatible = "itead,sonoff-ihost", "rockchip,rv1109";
 +};
 \ No newline at end of file
-diff --git a/arch/arm/boot/dts/rockchip/rv1109.dtsi b/arch/arm/boot/dts/rockchip/rv1109.dtsi
+diff --git a/arch/arm/boot/dts/rv1109.dtsi b/arch/arm/boot/dts/rv1109.dtsi
 new file mode 100644
 index 000000000..9cbaa08ab
 --- /dev/null
-+++ b/arch/arm/boot/dts/rockchip/rv1109.dtsi
++++ b/arch/arm/boot/dts/rv1109.dtsi
 @@ -0,0 +1,23 @@
 +// SPDX-License-Identifier: (GPL-2.0+ OR MIT)
 +/*
